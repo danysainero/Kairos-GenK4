@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      html,
+      body {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .spinner-container {
+        background: rgb(252, 252, 252);
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        width: 100vw;
+      }
+      .spinner {
+        animation: rotate 2s linear infinite;
+        border: blue 8px dotted;
+        border-radius: 50%;
+        border-top-color: transparent;
+        height: 10vw;
+        left: calc(50% - 5vw);
+        position: absolute;
+        top: 50%;
+        width: 10vw;
+      }
+
+      .btn-container,
+      .characters-container {
+        align-items: center;
+        display: flex;
+        height: 10vh;
+        justify-content: center;
+        margin: 50px 0;
+      }
+
+      .characters-container {
+        flex-direction: column;
+      }
+
+      .btn {
+        background-color: aquamarine;
+        border-radius: 8px;
+        font-size: 1.2rem;
+        padding: 8px 12px;
+      }
+
+      .characters {
+        font-size: 1.2rem;
+        padding: 8px 12px;
+        text-align: center;
+        width: auto;
+      }
+
+      .hide {
+        display: none;
+      }
+      @keyframes rotate {
+        0% {
+          transform: rotate(0);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="spinner-container hide">
+      <span class="spinner"></span>
+    </div>
+
+    <div class="btn-container">
+      <button class="btn">GET CHARACTERS</button>
+    </div>
+    <div class="characters-container">
+    </div>
+
+    <script src="async.js"></script>
+  </body>
+</html>

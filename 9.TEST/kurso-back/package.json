@@ -1,0 +1,17 @@
+{
+  "name": "kurso-back",
+  "version": "1.0.0",
+  "description": "",
+  "main": "babel.config.js",
+  "dependencies": {
+    "babel-jest": "^25.2.6",
+    "jest": "^25.2.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
