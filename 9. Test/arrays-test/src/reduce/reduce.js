@@ -3,38 +3,38 @@
 /********************************************************************/
 // Reducir el array a un unico valor con la suma de todos sus elementos
 
-function total(arr) {
+export function total(arr) {
   return arr.reduce((acc, val) => {
     return acc + val;
   });
 }
 
-console.log("ejercicio 1: ", total([1, 2, 3]));
+//console.log("ejercicio 1: ", total([1, 2, 3]));
 
 /********************************************************************/
 //devolver la suma del precio de todos los productos del carrito
 
-const carrito = [
+ const carrito = [
   { service: "consultoría", price: 3000 },
   { service: "desarrollo", price: 10000 },
   { service: "soporte", price: 7000 }
 ];
 
-const totalPrice = carrito.reduce((acc, item) => {
+export const totalPrice = carrito.reduce((acc, item) => {
   return (acc = acc + item.price);
 }, 0);
 
-console.log("ejercicio 2: ", totalPrice);
+//console.log("ejercicio 2: ", totalPrice);
 
 /********************************************************************/
 //concatenar el array y convertir en un string
 
-function stringConcat(arr1) {
+export function stringConcat(arr1) {
   return arr1.reduce((acc, val) => (acc += "" + val));
 }
 
 const res = stringConcat([1, 2, 3]);
-console.log("ejercicio 3: ", res); // "123"
+//console.log("ejercicio 3: ", res); // "123"
 
 /********************************************************************/
 //devolver el numero total de personas que han votado
@@ -47,7 +47,7 @@ const voters = [
   { name: "Joey", age: 41, voted: true }
 ];
 
-function totalVotes(voters) {
+export function totalVotes(voters) {
   const result = voters.reduce(
     (acc, voter) => (voter.voted ? acc + 1 : acc + 0),
     0
@@ -55,7 +55,7 @@ function totalVotes(voters) {
   return result;
 }
 
-console.log("ejercicio 4: ", totalVotes(voters)); // 2
+//console.log("ejercicio 4: ", totalVotes(voters)); // 2
 
 /********************************************************************/
 //Devolver el numero mayor
@@ -69,7 +69,7 @@ function foo(numbers) {
   });
 }
 
-console.log("ejercicio 5: ", foo([3000, 41, 26, 1000]));
+//console.log("ejercicio 5: ", foo([3000, 41, 26, 1000]));
 
 /********************************************************************/
 //Devolver la suma de todas las edades
@@ -86,7 +86,7 @@ const totalAges = people.reduce((acc, person) => {
   return acc + person.age;
 }, 0);
 
-console.log("ejercicio 6: ", totalAges);
+//console.log("ejercicio 6: ", totalAges);
 
 /********************************************************************/
 //Devolver la media de edad de todas las personas
@@ -103,7 +103,7 @@ const mediaAges =
     return (acc += mutant.age);
   }, 0) / xmen.length;
 
-console.log("ejercicio 7: ", mediaAges);
+//console.log("ejercicio 7: ", mediaAges);
 
 /********************************************************************/
 //Pasar como parametro un numero y devolverlo al revés y cada cifra en una posicion de un array
@@ -111,7 +111,7 @@ function reverseArr(num) {
   return Array.from(String(num)).reverse();
 }
 
-console.log(reverseArr(123)); // expected ["3","2","1]
+//console.log(reverseArr(123)); // expected ["3","2","1]
 
 /********************************************************************/
 /* Include how many of the potential voters were in the ages 18-25, how many from 26-35, 
@@ -149,4 +149,4 @@ const voterCount = voters2.reduce((a, { age, voted }) => {
   return a;
 }, {});
 
-console.log(voterCount); /* OUTPUT --> { youngVotes: 1,  youth: 4,  midsVotes: 3,  mids: 4,  oldVotes: 3,  olds: 4 } */
+//console.log(voterCount); /* OUTPUT --> { youngVotes: 1,  youth: 4,  midsVotes: 3,  mids: 4,  oldVotes: 3,  olds: 4 } */
